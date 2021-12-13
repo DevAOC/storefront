@@ -1,5 +1,6 @@
 const initialState = {
   products: [],
+  items: 0,
 };
 
 export default function cartReducer(state = initialState, action) {
