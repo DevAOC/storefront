@@ -5,16 +5,13 @@ import './App.css';
 
 import Header from './components/header/Header.js';
 import Categories from './components/categories/Categories';
+import Products from './components/products/Products.js';
 import Footer from './components/footer/Footer';
 
 const mapStateToProps = (state) => ({
-  categories: state.storefront.categories,
-  products: state.storefront.products,
-  activeCategory: state.storefront.activeCategory,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  selectCategory: (category) => dispatch(selectCategory(category)),
+  categories: state.categories,
+  products: state.products,
+  activeCategory: state.activeCategory,
 });
 
 export default connect(
@@ -25,6 +22,7 @@ export default connect(
     <>
       <Header />
       <Categories />
+      <Products />
       <Footer />
     </>
   );
