@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { useEffect } from 'react';
+import { List, ListItem } from '@mui/material';
 
 const mapStateToProps = (state) => ({
   products: state.products,
@@ -20,5 +21,13 @@ export default connect(
   //   props.getAllProducts();
   // }, []);
 
-  return <></>;
+  return (
+    <>
+      <List>
+        {props.products.map((product) => (
+          <ListItem>{product.name}</ListItem>
+        ))}
+      </List>
+    </>
+  );
 });
